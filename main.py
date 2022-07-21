@@ -22,7 +22,6 @@ def send_message(host, port, subject, to_addr, from_addr, text, username, passwo
         text
     ))
 
-
     server = smtplib.SMTP(host, port)
     server.starttls()
     logging.info(time.asctime() + ' connect to server ' + host)
@@ -60,7 +59,6 @@ def send_telegram(text: str, chanel_id):
     token = TOKEN_TELEGRAM
     url = "https://api.telegram.org/bot"
     chanel_id = chanel_id
-    #old_chanel_id = -1001523943888
     url += token
     method = url + "/sendMessage"
 
@@ -87,7 +85,6 @@ def clear_inbox(host, username, password):
     if len(messages) == 0:
         return None
     messages = messages[0].split()
-    # print(messages)
     for mail in messages:
         _, msg = imap.fetch(mail, "(RFC822)")
         imap.store(mail, "+FLAGS", "\\Deleted")
