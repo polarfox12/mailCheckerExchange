@@ -1,3 +1,2 @@
 # mailCheckerExchange
-mailCheker
-ПО для проверки доступности почтового сервиса 
+ПО для проверки доступности почтового сервиса Microsoft Exchange
